@@ -1,0 +1,18 @@
+:root {
+    /* Branding - iOS Style */
+    --color-primary: #007AFF;
+    /* iOS Blue */
+    --color-secondary: #FF9500;
+    /* iOS Orange */
+
+    /* Alias for compatibility */
+    --brand: #007AFF;
+}
+
+/* Reverted global scale */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
