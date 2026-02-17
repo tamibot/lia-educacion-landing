@@ -6,36 +6,48 @@ const FAQ: React.FC = () => {
 
   const faqs = [
     {
-      q: "💸 ¿Hay costos adicionales a la suscripción?",
-      a: "Sí, la transparencia es clave. Tú cubres los costos de consumo de IA (Tokens de OpenAI/Gemini) y la API de WhatsApp (Meta). Estos se pagan directamente al proveedor según tu uso real. LIA no cobra comisiones ni sobreprecios sobre estos costos."
+      q: "🤖 ¿Qué diferencia a LIA de un chatbot convencional?",
+      a: "LIA no es un bot de soporte, es un Agente de Ventas. Mientras un chatbot normal espera preguntas, LIA persigue la venta, maneja objeciones, usa gatillos mentales de urgencia y hace seguimiento por días hasta cerrar. Además, vive dentro de un ecosistema que incluye LMS y CRM."
     },
     {
-      q: "🏷️ ¿Por cuánto tiempo aplica el descuento de lanzamiento?",
-      a: "La oferta especial es válida para tus primeros 3 meses de servicio. Después, tu plan se ajustará al precio regular de lista, que sigue siendo una fracción del costo de un empleado humano."
+      q: "🛠️ ¿Necesito mantener mis suscripciones de Teachable, Kajabi o ClickFunnels?",
+      a: "Probablemente no. LIA incluye un LMS completo (alojamiento de cursos), herramientas de Email Marketing y construcción de Landing Pages. La mayoría de nuestros clientes cancelan sus otras herramientas y se ahorran cientos de dólares al mes centralizando todo en LIA."
     },
     {
-      q: "🤖 ¿El Agente IA realmente cierra ventas?",
-      a: "Absolutamente. LIA no es un chatbot básico. Está entrenada con técnicas de cierre de ventas, manejo de objeciones y urgencia. Puede llevar una conversación desde 'info' hasta 'link de pago' de forma autónoma."
+      q: "💸 ¿Cómo funciona el cobro de WhatsApp y la IA?",
+      a: "Funcionamos con transparencia total. LIA no te cobra markup. Tú conectas tu tarjeta directamente a Meta (WhatsApp) y OpenAI. Pagas exactamente lo que consumes. Un usuario promedio gasta entre $15-$30 USD extras al mes por miles de conversaciones."
     },
     {
-      q: "🎓 ¿Por qué debería migrar mi academia a LIA LMS?",
-      a: "Por rentabilidad. Plataformas como Hotmart te cobran hasta un 10% por cada venta + costos de retiro. En LIA, tú usas tu propia pasarela de pagos (Stripe/MercadoPago) y el dinero es 100% tuyo. Si vendes $10k, te ahorras $1k cada mes."
+      q: "🧠 ¿Qué tengo que hacer yo y qué hace LIA?",
+      a: "Tú eres el experto en tu tema: grabas tus cursos y defines tu oferta. LIA es tu equipo técnico y comercial: configura el bot, crea tus páginas de venta, gestiona los alumnos y procesa los pagos. Tú pones el contenido, LIA pone el sistema."
     },
     {
-      q: "🎨 ¿Cómo funciona el Content Studio?",
-      a: "Es magia. Subes tus grabaciones crudas y LIA identifica los momentos 'virales', los recorta, subtitula y genera el copy para redes sociales. Ahorras horas de edición manual."
+      q: "🎨 ¿Qué es el Content Studio IA?",
+      a: "Es nuestra suite de creatividad artificial. LIA analiza tu contenido y crea automáticamente los assets de marketing que necesitas: posts para Instagram/TikTok, correos de venta persuasivos y estructuras de anuncios, todo entrenado con tu estilo y la información real de tu curso."
     },
     {
-      q: "📞 ¿Puedo intervenir en las conversaciones?",
-      a: "Siempre. Tienes un panel de control donde ves los chats en tiempo real. Si el alumno requiere soporte humano complejo, LIA te notifica y te pasa el control inmediatamente."
+      q: "⚡ ¿Realmente puedo empezar en 48 horas?",
+      a: "Sí. Nuestro sistema de 'Onboarding Express' está diseñado para velocidad. Si ya tienes tu material listo (temario y videos), nuestro equipo configura tu agente y tu plataforma en 2 días hábiles para que lances campañas el fin de semana."
     },
     {
-      q: "🛡️ ¿Cuál es la política de garantía?",
-      a: "Ofrecemos 7 días de garantía de satisfacción total. Si en tu primera semana sientes que LIA no es para ti, te reembolsamos tu dinero. Queremos clientes felices y exitosos."
+      q: "💰 ¿LIA cobra comisiones por mis ventas?",
+      a: "Cero. 0%. Nada. A diferencia de Hotmart o Udemy que se llevan un 10-50%, en LIA tú conectas tu propia pasarela (Stripe o MercadoPago). El dinero va directo de tu alumno a tu cuenta bancaria. Tu éxito es 100% tuyo."
     },
     {
-      q: "🚀 ¿Qué incluye el 'Setup Prioritario' del plan Full Suite?",
-      a: "Nos encargamos de todo. Subimos tus cursos, configuramos tu agente, armamos los flujos de venta y conectamos tu WhatsApp. Te entregamos las llaves del auto encendido."
+      q: "📞 ¿Qué pasa si un usuario hace una pregunta muy difícil?",
+      a: "LIA es inteligente, pero conoce sus límites. Si detecta una situación compleja o frustración en el usuario, transfiere el chat inmediatamente a un humano (ti o tu equipo) y te notifica por WhatsApp/Email para que intervengas al instante."
+    },
+    {
+      q: "💳 ¿Puedo usar mi propia pasarela de pagos?",
+      a: "Sí. Nos integramos nativamente con Stripe y MercadoPago para cobros automáticos. También puedes configurar transferencias bancarias manuales o Yape/Plin, y LIA puede enviar los datos y validar los comprobantes (con supervisión)."
+    },
+    {
+      q: "♾️ ¿Tengo límite de alumnos o contactos?",
+      a: "No. Creemos que no se debe castigar el crecimiento. Tu plan incluye usuarios, contactos y cursos ilimitados. Escala de 100 a 100,000 alumnos sin que tu mensualidad de LIA suba de precio."
+    },
+    {
+      q: "🏛️ ¿Sirve para Universidades o solo para cursos online?",
+      a: "LIA es modular. Para infoproductores, automatiza todo el negocio. Para Universidades e Institutos, LIA actúa como un cualificador masivo de leads que se integra con CRMs corporativos (Salesforce/HubSpot) para limpiar el tráfico antes de pasarlo a asesores humanos."
     }
   ];
 
@@ -44,19 +56,22 @@ const FAQ: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 max-w-3xl">
 
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase mb-6">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-full text-xs font-bold uppercase mb-6 tracking-wide">
             <HelpCircle size={14} /> Dudas Frecuentes
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6 tracking-tight">
-            Resolvemos tus dudas.
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+            Todo lo que necesitas saber
           </h2>
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+            Resolvemos tus dudas sobre costos, implementación y tecnología.
+          </p>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className={`border rounded-2xl transition-all duration-300 overflow-hidden ${openIndex === i ? 'border-blue-200 bg-blue-50/30' : 'border-gray-200 hover:border-blue-100'}`}
+              className={`border rounded-2xl transition-all duration-300 overflow-hidden ${openIndex === i ? 'border-blue-500 ring-4 ring-blue-50 bg-white shadow-lg' : 'border-gray-200 hover:border-blue-200 hover:bg-gray-50'}`}
             >
               <button
                 className="w-full flex items-center justify-between p-6 text-left"
@@ -81,10 +96,11 @@ const FAQ: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-gray-500 mb-4">¿Tienes más preguntas?</p>
-          <button className="btn-secondary px-8 py-3 rounded-xl font-bold shadow-lg shadow-orange-200 hover:-translate-y-1 transition-transform">
-            Hablar con un Asesor 👨‍💼
+        <div className="mt-16 text-center">
+          <p className="text-gray-500 mb-6 font-medium">¿Tienes una duda específica?</p>
+          <button className="bg-[#007AFF] text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl shadow-blue-200 hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto">
+            <span>Hablar con un Experto</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
           </button>
         </div>
 

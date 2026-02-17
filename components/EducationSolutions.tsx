@@ -49,8 +49,8 @@ const EducationSolutions: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {solutions.map((sol, i) => (
-                        <div key={i} className="group p-8 rounded-3xl border border-gray-100 hover:border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white">
-                            <div className={`w-14 h-14 rounded-2xl ${sol.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-2xl`}>
+                        <div key={i} className="group p-8 rounded-3xl border border-gray-100 hover:border-blue-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white flex flex-col items-center text-center">
+                            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-4xl`}>
                                 {sol.icon}
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-3">{sol.title}</h3>
