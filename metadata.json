@@ -1,0 +1,8 @@
+{
+  "name": "LIA.AI - Tu Empleada de IA",
+  "description": "Una landing page de alta conversión para LIA, la primera agente de IA que trabaja como Directora Comercial, Creadora de Contenido y Administradora de Plataforma para negocios educativos.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
