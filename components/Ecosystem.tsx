@@ -75,7 +75,7 @@ const Ecosystem: React.FC = () => {
         <section
             id="ecosystem"
             ref={containerRef}
-            className="relative h-[250vh] md:h-[250vh] h-auto bg-white"
+            className="relative h-auto md:h-[250vh] bg-white"
         >
             <div className="sticky top-0 md:h-screen h-auto w-full flex flex-col items-center justify-center overflow-hidden py-12 md:py-0 px-6">
 
@@ -95,7 +95,7 @@ const Ecosystem: React.FC = () => {
                 <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Left: The Premium Dashboard Mockup (Sticky) */}
-                    <div className="w-full md:w-3/5 lg:w-2/3 perspective-1000 hidden md:block">
+                    <div className="w-full md:w-3/5 lg:w-2/3 perspective-1000 block">
                         <div className="relative group transition-all duration-700 hover:rotate-y-1">
                             {/* Decorative Glow */}
                             <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 blur-3xl opacity-50 transition-opacity group-hover:opacity-80"></div>
@@ -120,30 +120,30 @@ const Ecosystem: React.FC = () => {
                                     <div className="h-full pt-8 font-sans bg-[#fcfdfe] text-gray-600 flex overflow-hidden">
 
                                         {/* Sidebar */}
-                                        <div className="w-48 xl:w-56 bg-white border-r border-gray-100 flex flex-col p-5 shrink-0">
-                                            <div className="flex items-center gap-2.5 mb-8">
-                                                <div className="w-7 h-7 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center text-white font-black text-xs shadow-lg shadow-blue-500/20">L</div>
-                                                <div className="font-bold text-gray-900 text-sm tracking-tight truncate">LIA Academy</div>
+                                        <div className="w-14 md:w-48 xl:w-56 bg-white border-r border-gray-100 flex flex-col p-2 md:p-5 shrink-0 transition-all duration-300">
+                                            <div className="flex items-center justify-center md:justify-start gap-2.5 mb-4 md:mb-8">
+                                                <div className="w-6 h-6 md:w-7 md:h-7 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center text-white font-black text-[10px] md:text-xs shadow-lg shadow-blue-500/20">L</div>
+                                                <div className="font-bold text-gray-900 text-sm tracking-tight truncate hidden md:block">LIA Academy</div>
                                             </div>
                                             <div className="space-y-1">
                                                 {features.map((item) => (
                                                     <div
                                                         key={item.id}
-                                                        className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-300 ${activeTab === item.id ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-400 opacity-60'}`}
+                                                        className={`flex items-center justify-center md:justify-start gap-3 px-2 md:px-3 py-2 md:py-2.5 rounded-xl transition-all duration-300 ${activeTab === item.id ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-400 opacity-60'}`}
                                                     >
                                                         <span className="text-sm">{item.icon}</span>
-                                                        <span className="text-[10px] font-bold tracking-tight">{item.title}</span>
-                                                        {activeTab === item.id && <div className="ml-auto w-1 h-3 bg-blue-600 rounded-full animate-pulse"></div>}
+                                                        <span className="text-[10px] font-bold tracking-tight hidden md:block">{item.title}</span>
+                                                        {activeTab === item.id && <div className="hidden md:block ml-auto w-1 h-3 bg-blue-600 rounded-full animate-pulse"></div>}
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
 
                                         {/* Main View Area */}
-                                        <div className="flex-1 p-6 overflow-hidden flex flex-col gap-6 bg-[#fcfdfe] relative">
+                                        <div className="flex-1 p-3 md:p-6 overflow-hidden flex flex-col gap-6 bg-[#fcfdfe] relative">
                                             <div className="h-full w-full">
                                                 {/* LMS VIEW */}
-                                                <div className={`transition-all duration-500 absolute inset-0 pt-16 pr-6 pl-54 xl:pl-62 pb-6 ${activeTab === 'lms' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+                                                <div className={`transition-all duration-500 absolute inset-0 pt-12 md:pt-16 pr-3 md:pr-6 pl-16 md:pl-54 xl:pl-62 pb-4 md:pb-6 ${activeTab === 'lms' ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
                                                     <div className="flex flex-col gap-4 h-full">
                                                         <div className="bg-gray-900 rounded-xl aspect-video relative overflow-hidden shadow-lg border border-white/10 group cursor-pointer shrink-0">
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>

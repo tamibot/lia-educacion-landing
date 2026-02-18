@@ -14,10 +14,16 @@ const Footer: React.FC = () => {
             Activa tu Agente LIA hoy mismo. Tu primera venta automática podría ser esta misma semana.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-white text-blue-900 font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-white/20 hover:-translate-y-1 transition-all flex items-center gap-2">
+            <button
+              onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+              className="bg-white text-blue-900 font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-white/20 hover:-translate-y-1 transition-all flex items-center gap-2"
+            >
               <Zap size={20} className="fill-blue-600 text-blue-600" /> Contratar a LIA <ArrowRight size={20} />
             </button>
-            <button className="border border-blue-700/50 bg-blue-800/50 text-white font-medium text-lg px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors flex items-center gap-2">
+            <button
+              onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+              className="border border-blue-700/50 bg-blue-800/50 text-white font-medium text-lg px-8 py-4 rounded-xl hover:bg-blue-800 transition-colors flex items-center gap-2"
+            >
               💬 Hablar con Ventas
             </button>
           </div>

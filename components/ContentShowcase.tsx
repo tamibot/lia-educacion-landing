@@ -8,7 +8,7 @@ const ContentShowcase: React.FC = () => {
 
     // IPhone Frame (Ultra Premium)
     const IPhoneFrame: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-        <div className="bg-black rounded-[3rem] md:rounded-[3.5rem] p-3 w-full max-w-[320px] h-[640px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] mx-auto border-[6px] border-gray-900 relative ring-1 ring-white/10 flex-shrink-0 transition-all duration-500">
+        <div className="bg-black rounded-[3rem] md:rounded-[3.5rem] p-3 w-full max-w-[320px] h-[640px] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] mx-auto border-[6px] border-gray-900 relative ring-1 ring-white/10 flex-shrink-0 transition-all duration-500 scale-[0.65] md:scale-90 lg:scale-100">
             {/* Action Button */}
             <div className="absolute top-24 -left-[2px] h-8 w-[3px] bg-gray-700 rounded-l-md"></div>
             {/* Volume Buttons */}
@@ -491,15 +491,15 @@ const ContentShowcase: React.FC = () => {
             </div>
 
             {/* Sticky Container Area - Reduced Height */}
-            <div ref={containerRef} className="relative h-[150vh] pb-12">
+            <div ref={containerRef} className="relative h-auto md:h-[150vh] pb-24 md:pb-12 overflow-x-hidden md:overflow-visible">
 
-                <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+                <div className="relative h-auto md:sticky md:top-0 md:h-screen flex flex-col justify-center overflow-visible md:overflow-hidden">
                     <div className="container mx-auto px-4 md:px-6 max-w-5xl relative z-10">
 
-                        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center h-full">
+                        <div className="flex flex-col-reverse lg:flex-row gap-4 lg:gap-16 items-center h-full">
 
                             {/* Left: Step List */}
-                            <div className="w-full lg:w-1/2 space-y-3 pt-6 lg:pt-0">
+                            <div className="w-full lg:w-1/2 space-y-3 pt-4 lg:pt-0">
                                 {steps.map((step, i) => {
                                     const isActive = activeTab === step.id;
                                     return (
@@ -507,7 +507,7 @@ const ContentShowcase: React.FC = () => {
                                             key={step.id}
                                             onClick={() => handleStepClick(i)}
                                             className={`p-5 rounded-2xl cursor-pointer border transition-all duration-300 group ${isActive
-                                                ? 'bg-white border-blue-200 shadow-xl shadow-blue-900/5 ring-1 ring-blue-50 scale-105 relative z-10'
+                                                ? 'bg-white border-blue-200 shadow-xl shadow-blue-900/5 ring-1 ring-blue-50 scale-105 relative z-20'
                                                 : 'bg-transparent border-transparent hover:bg-white hover:border-gray-100 hover:shadow-md opacity-60 hover:opacity-100'}`}
                                         >
                                             <h3 className={`text-xl font-bold mb-2 flex items-center gap-3 ${isActive ? 'text-gray-900' : 'text-gray-400'}`}>
@@ -538,7 +538,7 @@ const ContentShowcase: React.FC = () => {
                             </div>
 
                             {/* Right: Sticky Mockup */}
-                            <div className="w-full lg:w-1/2 flex justify-center sticky top-24 lg:top-0 h-full items-center">
+                            <div className="w-full lg:w-1/2 flex justify-center sticky top-0 md:top-24 lg:top-0 h-full items-center">
                                 {/* Bg Glow */}
                                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[100px] -z-10"></div>
 

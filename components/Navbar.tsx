@@ -30,36 +30,44 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3 lg:py-4'}`}>
-        <div className="container mx-auto px-6 max-w-6xl">
-          <div className={`transition-all duration-300 ${isScrolled ? 'bg-white/90 backdrop-blur-md border-gray-200/50 shadow-sm' : 'bg-transparent border-transparent'} border rounded-full px-5 py-2 md:px-8 md:py-3 flex items-center justify-between`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'py-3' : 'py-5 lg:py-6'}`}>
+        <div className="container mx-auto px-6 max-w-7xl">
+          <div className={`transition-all duration-500 ${isScrolled
+            ? 'bg-white/80 backdrop-blur-xl border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)]'
+            : 'bg-transparent border-transparent'} border rounded-2xl px-6 py-3 md:px-8 md:py-4 flex items-center justify-between`}>
 
             {/* Logo */}
-            <div className="flex items-center gap-2 cursor-pointer z-50 relative" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-black text-sm shadow-lg shadow-blue-500/20">L</div>
-              <span className="text-lg font-black tracking-tighter text-gray-900">LIA<span className="text-blue-600">.AI</span></span>
+            <div className="flex items-center gap-2.5 cursor-pointer z-50 relative group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center text-white font-black text-sm shadow-lg shadow-blue-500/25 group-hover:scale-105 transition-transform duration-300">L</div>
+              <span className="text-xl font-black tracking-tighter text-gray-900">LIA<span className="text-blue-600">.AI</span></span>
             </div>
 
             {/* Desktop Links */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-10">
               {navLinks.map((link) => (
-                <a key={link.name} href={link.href} className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">
+                <a key={link.name} href={link.href} className="text-[15px] font-medium text-gray-600 hover:text-blue-600 transition-all hover:-translate-y-0.5 relative group">
                   {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full rounded-full"></span>
                 </a>
               ))}
             </div>
 
             {/* CTA & Mobile Toggle */}
-            <div className="flex items-center gap-3 z-50 relative">
-              <button className="hidden sm:flex text-white px-5 py-2.5 rounded-full text-sm font-bold items-center gap-2 hover:opacity-90 transition-opacity shadow-lg" style={{ backgroundColor: 'var(--color-secondary)', boxShadow: '0 4px 14px rgba(255, 90, 31, 0.25)' }}>
+            <div className="flex items-center gap-4 z-50 relative">
+              <button
+                onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+                className="hidden sm:flex text-white px-6 py-2.5 rounded-xl text-[15px] font-bold items-center gap-2 hover:opacity-90 transition-all shadow-lg hover:shadow-orange-500/25 hover:-translate-y-0.5 active:translate-y-0"
+                style={{ backgroundColor: 'var(--color-secondary)' }}
+              >
                 Agendar Demo
               </button>
 
               <button
-                className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors bg-gray-100 rounded-full"
+                className="lg:hidden p-3 text-gray-600 hover:text-gray-900 transition-all bg-white/50 hover:bg-white rounded-xl active:scale-95 border border-transparent hover:border-gray-100"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
               >
-                {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
@@ -67,28 +75,32 @@ const Navbar: React.FC = () => {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-40 lg:hidden transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="flex flex-col h-full pt-24 px-6 pb-8">
+      <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 lg:hidden transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1) ${isMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="flex flex-col h-full pt-28 px-8 pb-10">
           <div className="flex-1 space-y-6">
-            {navLinks.map((link) => (
+            {navLinks.map((link, idx) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="flex items-center justify-between text-2xl font-bold text-gray-900 border-b border-gray-100 pb-4"
+                className="flex items-center justify-between text-2xl font-bold text-gray-900 border-b border-gray-100 pb-5 group"
                 onClick={() => setIsMenuOpen(false)}
+                style={{ transitionDelay: `${idx * 50}ms` }}
               >
-                {link.name}
-                <ChevronRight size={20} className="text-gray-400" />
+                <span className="group-hover:text-blue-600 transition-colors">{link.name}</span>
+                <ChevronRight size={24} className="text-gray-300 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
               </a>
             ))}
           </div>
 
-          <div className="space-y-4">
-            <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-500/20 flex items-center justify-center gap-2">
+          <div className="space-y-6">
+            <button
+              onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+              className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold text-lg shadow-xl shadow-blue-500/30 flex items-center justify-center gap-2 active:scale-95 transition-transform"
+            >
               Empezar Ahora <ArrowRight size={20} />
             </button>
-            <p className="text-center text-gray-400 text-sm">
-              ¿Tienes dudas? <span className="text-blue-600 font-bold">Hablemos por WhatsApp</span>
+            <p className="text-center text-gray-400 text-sm font-medium">
+              ¿Tienes dudas? <span onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')} className="text-blue-600 font-bold cursor-pointer hover:underline">Hablemos por WhatsApp</span>
             </p>
           </div>
         </div>

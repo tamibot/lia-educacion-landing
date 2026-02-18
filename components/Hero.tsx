@@ -36,19 +36,19 @@ const Hero: React.FC = () => {
   const countLeads = useCountUp(500, 2500);
 
   return (
-    <div className="relative pt-32 pb-8 md:pt-40 md:pb-12 overflow-hidden bg-white">
+    <div className="relative pt-28 pb-10 md:pt-40 md:pb-12 overflow-hidden bg-white">
       {/* Background Effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-b from-blue-50/80 via-indigo-50/40 to-white rounded-full blur-[120px] -z-10" />
 
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+      <div className="container mx-auto px-5 md:px-12 max-w-6xl">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-8 items-center">
 
           {/* Left Column: Copy & CTAs */}
           <div className="text-center lg:text-left z-20">
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-5 md:mb-6 animate-fade-in">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
@@ -56,9 +56,9 @@ const Hero: React.FC = () => {
               ⚡IA que Vende y Atiende 24/7
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 tracking-tighter leading-[1.1]">
-              El Chatbot con IA que <br />
-              Cierra Ventas <br />
+            <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tighter leading-[1.1]">
+              El Chatbot con IA que <br className="hidden md:block" />
+              Cierra Ventas <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Educativas por WhatsApp.</span>
             </h1>
 
@@ -68,13 +68,20 @@ const Hero: React.FC = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
-              <button className="group relative overflow-hidden text-white px-5 py-2.5 rounded-full font-bold text-base hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgba(255,90,31,0.25)]" style={{ backgroundColor: 'var(--color-secondary)' }}>
+              <button
+                onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+                className="group relative overflow-hidden text-white px-5 py-2.5 rounded-full font-bold text-base hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgba(255,90,31,0.25)]"
+                style={{ backgroundColor: 'var(--color-secondary)' }}
+              >
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 pointer-events-none" />
                 Contratar Agente
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <button className="group bg-white text-gray-800 border-2 border-gray-100 px-5 py-2.5 rounded-full font-bold text-base hover:bg-gray-50 hover:border-gray-200 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap">
+              <button
+                onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+                className="group bg-white text-gray-800 border-2 border-gray-100 px-5 py-2.5 rounded-full font-bold text-base hover:bg-gray-50 hover:border-gray-200 transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
+              >
                 <div className="bg-blue-50 p-1 rounded-full group-hover:bg-blue-100 transition-colors">
                   <Play className="w-3 h-3 text-blue-600 fill-current ml-0.5" />
                 </div>
