@@ -359,7 +359,7 @@ const ContentShowcase: React.FC = () => {
                         <div className="bg-white/95 backdrop-blur border-b border-gray-100 px-4 py-3 flex items-center justify-between z-20 shrink-0">
                             <div className="flex items-center gap-1 text-blue-500 font-medium text-[15px]">
                                 <ChevronLeft size={22} />
-                                Librería
+                                <Button className="text-[#007AFF]">Librería</Button>
                             </div>
                             <div className="font-semibold text-sm text-gray-900">Brochure Growth.pdf</div>
                             <div className="flex items-center gap-4 text-gray-400">
