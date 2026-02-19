@@ -49,8 +49,13 @@ const AudienceSplit: React.FC = () => {
                                 </li>
                             </ul>
 
-                            <button onClick={() => window.location.hash = '#dashboard'} className="w-full text-white px-5 py-3 rounded-xl font-bold text-base shadow-md hover:opacity-90 transition-opacity flex items-center justify-center gap-2 mt-auto" style={{ backgroundColor: 'var(--color-secondary)' }}>
+                            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 md:py-4 rounded-xl flex items-center justify-center gap-2 transition-all group-hover:shadow-lg group-hover:scale-[1.02]">
+                                <button 
+                                    onClick={() => window.open('https://wa.me/51995547575?text=Hola%20quisiera%20mas%20informaci%C3%B3n%20de%20LIA%20Bot', '_blank')}
+                                    className="w-full flex items-center justify-center gap-2"
+                                >
                                 Empezar Ahora <ArrowRight size={18} />
+                                </button>
                             </button>
                         </div>
                     </div>
